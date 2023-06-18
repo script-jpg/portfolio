@@ -1,0 +1,24 @@
+[
+    {
+      "projectID": 1,
+      "name": "Project 1",
+      "description": "This is project 1",
+      "videoLink": "http://example.com/project1/video",
+      "githubLink": "http://github.com/example/project1"
+    },
+    {
+      "projectID": 2,
+      "name": "Project 2",
+      "description": "This is project 2",
+      "videoLink": "http://example.com/project2/video",
+      "githubLink": "http://github.com/example/project2"
+    },
+    {
+      "projectID": 3,
+      "name": "Project 3",
+      "description": "This is project 3",
+      "videoLink": "http://example.com/project3/video",
+      "githubLink": "http://github.com/example/project3"
+    }
+  ]
+  
