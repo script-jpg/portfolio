@@ -12,9 +12,9 @@ import { Project } from '../project';
 export class ProjectDisplayComponent implements OnInit {
   projects: Project[] = [];
 
-  value: string = 'some';
+  value: string = 'none';
 
-  constructor(private searchComponent: SearchComponent, private dataService: DataService) { 
+  constructor(private dataService: DataService) { 
     this.dataService.skillSubject.subscribe((skills: string[]) => {
       this.projects = this.dataService.projects.filter((project: Project) => {
         if (this.value === 'every') {
@@ -34,6 +34,8 @@ export class ProjectDisplayComponent implements OnInit {
       console.log("option: " + option)
       this.value = option;
     });
+
+    this.dataService.skillSubject.next([]);
   }
 
   ngOnInit(): void {

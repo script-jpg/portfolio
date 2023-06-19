@@ -4,7 +4,7 @@ import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {Observable, Subject} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import {map, startWith, timeout} from 'rxjs/operators';
 import {MatIconModule} from '@angular/material/icon';
 import {NgFor, AsyncPipe} from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -60,6 +60,7 @@ export class SearchComponent {
     event.chipInput!.clear();
 
     this.SkillCtrl.setValue(null);
+    this.dataService.skillSubject.next(this.Skills);  
   }
 
   remove(Skill: string): void {
