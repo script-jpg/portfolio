@@ -10,24 +10,39 @@ import { MatChip, MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProjectDisplayComponent } from './project-display/project-display.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProjectDisplayComponent,
+    SearchComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
-    SearchComponent,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatAutocompleteModule,
     MatChipsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatIconModule,
+    MatRadioModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatDividerModule,
+    MatCardModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [SearchComponent, ProjectDisplayComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,21 +1,30 @@
 <form>
     <mat-form-field class="example-chip-list">
-      <mat-label>Favorite Fruits</mat-label>
-      <mat-chip-grid #chipGrid aria-label="Fruit selection">
-        <mat-chip-row *ngFor="let fruit of fruits" (removed)="remove(fruit)">
-          {{fruit}}
-          <button matChipRemove [attr.aria-label]="'remove ' + fruit">
+      <mat-label>Find Skills</mat-label>
+      <mat-chip-grid #chipGrid aria-label="Skill selection">
+        <mat-chip-row *ngFor="let Skill of Skills" (removed)="remove(Skill)">
+          {{Skill}}
+          <button matChipRemove [attr.aria-label]="'remove ' + Skill">
             <mat-icon>cancel</mat-icon>
           </button>
         </mat-chip-row>
       </mat-chip-grid>
-      <input placeholder="New Fruit..." #fruitInput [formControl]="fruitCtrl"
+      <input placeholder="New Skill..." #SkillInput [formControl]="SkillCtrl"
         [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
         (matChipInputTokenEnd)="add($event)"/>
+        <label>Filter By:</label>
+        <mat-radio-group aria-label="Filter By: "  name="filterOptions" (change)="radioChange($event)" value="some">
+            <mat-radio-button value="some">Some</mat-radio-button>
+            <mat-radio-button value="every">All</mat-radio-button>
+            <mat-radio-button value="none">None</mat-radio-button>
+        </mat-radio-group>
+        
+        
+           
       <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-        <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
-          {{fruit}}
+        <mat-option *ngFor="let Skill of filteredSkills | async" [value]="Skill">
+          {{Skill}}
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>

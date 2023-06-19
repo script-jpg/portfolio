@@ -3,81 +3,88 @@ import {Component, ElementRef, ViewChild, inject} from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {MatIconModule} from '@angular/material/icon';
 import {NgFor, AsyncPipe} from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
+import {DataService} from '../data.service';
+import {MatRadioModule} from '@angular/material/radio';
+import { NgModel } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss'],
-  standalone: true,
-  imports: [
-    FormsModule,
-    MatFormFieldModule,
-    MatChipsModule,
-    NgFor,
-    MatIconModule,
-    MatAutocompleteModule,
-    ReactiveFormsModule,
-    AsyncPipe,
-  ],
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
-  separatorKeysCodes: number[] = [ENTER, COMMA];
-  fruitCtrl = new FormControl('');
-  filteredFruits: Observable<string[]>;
-  fruits: string[] = ['Lemon'];
-  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
 
-  @ViewChild('fruitInput')
-  fruitInput!: ElementRef<HTMLInputElement>;
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  SkillCtrl = new FormControl('');
+  filteredSkills: Observable<string[]>;
+  Skills: any[] = [];
+  allSkills: string[] = this.dataService.skills;
+
+  @ViewChild('SkillInput')
+  SkillInput!: ElementRef<HTMLInputElement>;
 
   announcer = inject(LiveAnnouncer);
 
-  constructor() {
-    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+  constructor(private dataService: DataService) {
+    this.filteredSkills = this.SkillCtrl.valueChanges.pipe(
       startWith(null),
-      map((fruit: string | null) => (fruit ? this._filter(fruit) : this.allFruits.slice())),
+      map((Skill: string | null) => (Skill ? this._filter(Skill) : this.allSkills.slice())),
     );
+    
   }
+
+  radioChange(event: any): void {
+    console.log(event.value);
+    this.dataService.filterOption.next(event.value);
+    this.dataService.skillSubject.next(this.Skills);
+  }
+
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
+    // Add our Skill
     if (value) {
-      this.fruits.push(value);
+      this.Skills.push(value);
     }
 
     // Clear the input value
     event.chipInput!.clear();
 
-    this.fruitCtrl.setValue(null);
+    this.SkillCtrl.setValue(null);
   }
 
-  remove(fruit: string): void {
-    const index = this.fruits.indexOf(fruit);
+  remove(Skill: string): void {
+    const index = this.Skills.indexOf(Skill);
 
     if (index >= 0) {
-      this.fruits.splice(index, 1);
+      this.Skills.splice(index, 1);
 
-      this.announcer.announce(`Removed ${fruit}`);
+      this.announcer.announce(`Removed ${Skill}`);
     }
+    this.dataService.skillSubject.next(this.Skills);  
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
-    this.fruits.push(event.option.viewValue);
-    this.fruitInput.nativeElement.value = '';
-    this.fruitCtrl.setValue(null);
+    this.Skills.push(event.option.viewValue);
+    this.SkillInput.nativeElement.value = '';
+    this.SkillCtrl.setValue(null);
+    this.dataService.skillSubject.next(this.Skills);
+    console.log("Skills: ", this.Skills);
+
   }
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
 
-    return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
+    return this.allSkills.filter(Skill => Skill.toLowerCase().includes(filterValue));
   }
 }
