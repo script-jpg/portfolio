@@ -3,7 +3,7 @@
       "projectID": 1,
       "name": "Concisify",
       "image": "../../assets/concisify.png",
-      "description": "Convert PDF to notes and generates a short quiz. Used Flask to access a ",
+      "description": "Convert PDF to notes and generates a short quiz. Used Flask to access NLP API and React to build the front-end. ",
       "videoLink": "https://www.youtube.com/watch?v=VplZf6LjioI&ab_channel=TerryKuang",
       "githubLink": "https://devpost.com/software/concisify"
     }, 
