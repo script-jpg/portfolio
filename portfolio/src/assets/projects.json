@@ -1,24 +1,28 @@
 [
     {
       "projectID": 1,
-      "name": "Project 1",
-      "description": "This is project 1",
-      "videoLink": "http://example.com/project1/video",
-      "githubLink": "http://github.com/example/project1"
-    },
+      "name": "Concisify",
+      "image": "../../assets/concisify.png",
+      "description": "Convert PDF to notes and generates a short quiz. Used Flask to access a ",
+      "videoLink": "https://www.youtube.com/watch?v=VplZf6LjioI&ab_channel=TerryKuang",
+      "githubLink": "https://devpost.com/software/concisify"
+    }, 
     {
-      "projectID": 2,
-      "name": "Project 2",
-      "description": "This is project 2",
-      "videoLink": "http://example.com/project2/video",
-      "githubLink": "http://github.com/example/project2"
-    },
+        "projectID": 2,
+        "name": "WikipediaExplorer",
+        "image": "../../assets/wikipediaExplorer.jpeg",
+        "description": "A web app that allows users to explore Wikipedia articles in a more interactive way. Each branch represents a hyperlink in the article.",
+        "videoLink": "https://script-jpg.github.io/WikiExplorer/",
+        "githubLink": "https://github.com/script-jpg/WikiExplorer"
+    }, 
     {
-      "projectID": 3,
-      "name": "Project 3",
-      "description": "This is project 3",
-      "videoLink": "http://example.com/project3/video",
-      "githubLink": "http://github.com/example/project3"
+        "projectID": 3,
+        "name": "Tag Search Portfolio",
+        "image": "../../assets/portfolio.png",
+        "description": "A portfolio website that allows users to search for projects by tags. ",
+        "videoLink": "",
+        "githubLink": ""
     }
+
 ]
   

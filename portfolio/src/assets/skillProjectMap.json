@@ -1,6 +1,17 @@
 [
-    {"skill": "MySQL", "projectID": 1},
-    {"skill": "Angular", "projectID": 1},
-    {"skill": "Python", "projectID": 2},
-    {"skill": "Angular", "projectID": 3}
+    {"skill": "Javascript", "projectID": 1},
+    {"skill": "HTML", "projectID": 1},
+    {"skill": "Python", "projectID": 1},
+    {"skill": "Flask", "projectID": 1},
+    {"skill": "React", "projectID": 1},
+    {"skill": "CSS", "projectID": 1},
+    {"skill": "NodeJS", "projectID": 2},
+    {"skill": "d3.js", "projectID": 2},
+    {"skill": "cheerio.js", "projectID": 2},
+    {"skill": "web scraping", "projectID": 2},
+    {"skill": "Javascript", "projectID": 2},
+    {"skill": "Typescript", "projectID": 3},
+    {"skill": "Angular", "projectID": 3},
+    {"skill": "Angular Material UI", "projectID": 3}
+
 ]
