@@ -22,6 +22,14 @@
         "description": "A portfolio website that allows users to search for projects by tags. ",
         "videoLink": "",
         "githubLink": ""
+    },
+    {
+        "projectID": 4,
+        "name": "Straights",
+        "image": "assets/straights.png",
+        "description": "A 4-Player card game that allows users to play against CPUs. Used C++ to implement the game logic and used MVC design pattern to separate the game logic and the UI.",
+        "videoLink": "",
+        "githubLink": "https://github.com/script-jpg/straights"
     }
 
 ]

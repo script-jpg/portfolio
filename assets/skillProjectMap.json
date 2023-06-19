@@ -12,6 +12,8 @@
     {"skill": "Javascript", "projectID": 2},
     {"skill": "Typescript", "projectID": 3},
     {"skill": "Angular", "projectID": 3},
-    {"skill": "Angular Material UI", "projectID": 3}
+    {"skill": "Angular Material UI", "projectID": 3},
+    {"skill": "C++", "projectID": 4},
+    {"skill": "Design Patterns", "projectID": 4}
 
 ]
