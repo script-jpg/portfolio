@@ -2,7 +2,7 @@
     {
       "projectID": 1,
       "name": "Concisify",
-      "image": "../../assets/concisify.png",
+      "image": "assets/concisify.png",
       "description": "Convert PDF to notes and generates a short quiz. Used Flask to access NLP API and React to build the front-end. ",
       "videoLink": "https://www.youtube.com/watch?v=VplZf6LjioI&ab_channel=TerryKuang",
       "githubLink": "https://devpost.com/software/concisify"
@@ -10,7 +10,7 @@
     {
         "projectID": 2,
         "name": "WikipediaExplorer",
-        "image": "../../assets/wikipediaExplorer.jpeg",
+        "image": "assets/wikipediaExplorer.jpeg",
         "description": "A web app that allows users to explore Wikipedia articles in a more interactive way. Each branch represents a hyperlink in the article.",
         "videoLink": "https://script-jpg.github.io/WikiExplorer/",
         "githubLink": "https://github.com/script-jpg/WikiExplorer"
@@ -18,7 +18,7 @@
     {
         "projectID": 3,
         "name": "Tag Search Portfolio",
-        "image": "../../assets/portfolio.png",
+        "image": "assets/portfolio.png",
         "description": "A portfolio website that allows users to search for projects by tags. ",
         "videoLink": "",
         "githubLink": ""
