@@ -10,9 +10,17 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+# Updating
+
+To add/modify/update/remove entries, update the projects.json, skillProjectMap.json, and set images in assets . Note that each project must be associated with its skills in skillProjectMap.json for it to show up.
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+To publish to github pages do
+`ng build --configuration=production --base-href=/portfolio/`
+`npx angular-cli-ghpages --dir=dist/portfolio`
 
 ## Running unit tests
 
