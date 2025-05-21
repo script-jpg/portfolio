@@ -37,7 +37,7 @@ export class DataService {
       }
     }
 
-    this.projects = joinedData;
+    this.projects = joinedData.sort((a, b) => b.projectID - a.projectID);
   }
 
   async getSkills() {
