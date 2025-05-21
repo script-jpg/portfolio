@@ -27,5 +27,10 @@
     {"skill": "AWS Lambda", "projectID": 6},
     {"skill": "Python", "projectID": 7},
     {"skill": "Tensorflow", "projectID": 7},
-    {"skill": "Keras", "projectID": 7}
+    {"skill": "Keras", "projectID": 7},
+    {"skill": "Python", "projectID": 8},
+    {"skill": "Pytorch", "projectID": 8},
+    {"skill": "Computer Vision", "projectID": 8},
+    {"skill": "Neural Networks", "projectID": 8},
+    {"skill": "Deep Learning", "projectID": 8}
 ]

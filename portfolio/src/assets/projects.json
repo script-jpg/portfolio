@@ -54,6 +54,14 @@
         "description": "Using the VAE (Variational Autoencoder) model to interpolate pokemon!",
         "videoLink": "",
         "githubLink": "https://github.com/script-jpg/pokemon_mixer"
+    },
+    {
+        "projectID": 8,
+        "name": "Class-Agnostic Semantic Edge Detection",
+        "image": "assets/edge_detection.png",
+        "description": "A deep learning project that performs class-agnostic edge detection using a U-Net architecture and weighted BCE loss on the PASCAL VOC 2012 dataset.",
+        "videoLink": "",
+        "githubLink": "https://github.com/script-jpg/Class-Agnostic-Semantic-Edge-Detection"
     }
 ]
   
