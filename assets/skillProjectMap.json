@@ -14,6 +14,13 @@
     {"skill": "Angular", "projectID": 3},
     {"skill": "Angular Material UI", "projectID": 3},
     {"skill": "C++", "projectID": 4},
-    {"skill": "Design Patterns", "projectID": 4}
-
+    {"skill": "Design Patterns", "projectID": 4},
+    {"skill": "Typescript", "projectID": 5},
+    {"skill": "NodeJS", "projectID": 5},
+    {"skill": "WebRTC", "projectID": 5},
+    {"skill": "Express", "projectID": 5},
+    {"skill": "Angular", "projectID": 5},
+    {"skill": "Redis", "projectID": 5},
+    {"skill": "Java", "projectID": 5},
+    {"skill": "AWS Lambda", "projectID": 5}
 ]
