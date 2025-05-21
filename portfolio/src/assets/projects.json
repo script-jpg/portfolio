@@ -32,12 +32,28 @@
         "githubLink": "https://github.com/script-jpg/straights"
     },
     {
-      "projectID": 5,
+        "projectID": 5,
+        "name": "Android PDF Editor",
+        "image": "assets/pdf_editor.png",
+        "description": "A feature-rich PDF reader application for Android. Built with kotlin and ❤️ ",
+        "videoLink": "",
+        "githubLink": "https://github.com/script-jpg/android-pdf-editor"
+    },
+    {
+      "projectID": 6,
       "name": "Entrance",
       "image": "assets/entrance.png",
       "description": "Chat with your favorite streamers! This is a platform for virtual meet and greets that I developed over 2 years. Uses webrtc for voice and video calls.",
       "videoLink": "https://www.youtube.com/watch?v=VmCuT3DcdmI",
       "githubLink": "https://github.com/script-jpg/entrance-chat/"
+    },
+    {
+        "projectID": 7,
+        "name": "Pokemon Mixer",
+        "image": "assets/pokemon_mixer.png",
+        "description": "Using the VAE (Variational Autoencoder) model to interpolate pokemon!",
+        "videoLink": "",
+        "githubLink": "https://github.com/script-jpg/pokemon_mixer"
     }
 ]
   
