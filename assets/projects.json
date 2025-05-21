@@ -30,7 +30,15 @@
         "description": "A 4-Player card game that allows users to play against CPUs. Used C++ to implement the game logic and used MVC design pattern to separate the game logic and the UI.",
         "videoLink": "",
         "githubLink": "https://github.com/script-jpg/straights"
-    }
+    },
+    {
+      "projectID": 5,
+      "name": "Entrance",
+      "image": "assets/entrance.png",
+      "description": "Chat with your favorite streamers! This is a platform for virtual meet and greets that I developed over 2 years. Uses webrtc for voice and video calls.",
+      "videoLink": "https://www.youtube.com/watch?v=VmCuT3DcdmI",
+      "githubLink": "https://github.com/script-jpg/entrance-chat/"
+    }, 
 
 ]
   
